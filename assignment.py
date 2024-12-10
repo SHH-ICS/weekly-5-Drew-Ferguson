@@ -10,5 +10,7 @@ try:
         pi += sign * 4 / (2 * i + 1)
         sign *= -1
 
+    print(pi) 
+
 except (ValueError, TypeError):
     print("Error: Invalid input. Please enter a positive integer.")
