@@ -10,7 +10,5 @@ try:
         pi += sign * 4 / (2 * i + 1)
         sign *= -1
 
-    print(round(pi, 4))
-
 except (ValueError, TypeError):
     print("Error: Invalid input. Please enter a positive integer.")
