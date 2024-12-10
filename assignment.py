@@ -2,6 +2,9 @@ import sys
 
 try:
     iterations = int(sys.stdin.readline())
+    if iterations <= 0:
+        raise ValueError("Iterations must be a positive integer")
+
     pi = 0
     sign = 1
     denominator = 1
@@ -11,7 +14,7 @@ try:
         sign *= -1
         denominator += 2
 
-    print(pi)
+    print(round(pi, 4))
 
-except ValueError:
-    print("Invalid input")
+except ValueError as e:
+    print(e)
