@@ -12,3 +12,5 @@ for ($i = 0; $i < $iterations; $i++) {
     $pi += $sign * 4 / (2 * $i + 1);
     $sign *= -1;
 }
+
+echo $pi . "\n";
