@@ -1,20 +1,16 @@
-import sys
-
 try:
-    iterations = int(sys.stdin.readline())
+    iterations = int(input().strip())
     if iterations <= 0:
-        raise ValueError("Iterations must be a positive integer")
+        raise ValueError
 
     pi = 0
     sign = 1
-    denominator = 1
 
-    for _ in range(iterations):
-        pi += sign * 4 / denominator
+    for i in range(iterations):
+        pi += sign * 4 / (2 * i + 1)
         sign *= -1
-        denominator += 2
 
     print(round(pi, 4))
 
-except ValueError as e:
-    print(e)
+except (ValueError, TypeError):
+    print("Error: Invalid input. Please enter a positive integer.")
