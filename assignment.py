@@ -1,6 +1,6 @@
 try:
     iterations = int(input().strip())
-    if iterations <= 0:
+    if iterations < 0:
         raise ValueError
 
     pi = 0
@@ -10,7 +10,7 @@ try:
         pi += sign * 4 / (2 * i + 1)
         sign *= -1
 
-    print(pi) 
+    print(pi)
 
 except (ValueError, TypeError):
-    print("Error: Invalid input. Please enter a positive integer.")
+    print("Error: Invalid input. Please enter a positive integer or 0.")
