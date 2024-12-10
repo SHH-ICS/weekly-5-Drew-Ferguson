@@ -2,7 +2,7 @@
 $iterations = $argv[1] ?? null;
 
 if ($argc !== 2 || !ctype_digit($iterations) || intval($iterations) < 0) {
-    echo "Error: \"Invalid input. Please enter a non-negative integer.\"\n";
+    echo "Error: \"Invalid input. Please enter a positive integer or 0.\"\n";
     exit(1);
 }
 
