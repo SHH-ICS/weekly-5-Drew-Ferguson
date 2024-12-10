@@ -1,10 +1,12 @@
 <?php
-$iterations = intval($argv[1] ?? -1); // Assign default -1 if $argv[1] is missing
-if ($argc !== 2 || $iterations < 0) {
+$iterations = $argv[1] ?? null;
+
+if ($argc !== 2 || !ctype_digit($iterations) || intval($iterations) < 0) {
     echo "Error: \"Invalid input. Please enter a non-negative integer.\"\n";
     exit(1);
 }
 
+$iterations = intval($iterations);
 $pi = 0;
 $sign = 1;
 
